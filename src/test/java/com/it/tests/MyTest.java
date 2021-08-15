@@ -41,7 +41,7 @@ public class MyTest extends BaseTest{
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 /*        driver.manage().window().maximize();
             driver.get("https://www.i.ua/");*/
-        final List<User> randomUsers = UserFactory.getRandomUsers(200);
+        final List<User> randomUsers = UserFactory.getRandomUsers(2);
         randomUsers.forEach(System.out::println);
         app.login.login(validUser);
         Assert.assertEquals(app.board.getLbUserEmail(), validUser.email);

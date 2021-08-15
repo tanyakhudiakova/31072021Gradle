@@ -17,14 +17,15 @@ dependencies {
     implementation 'org.testng:testng:7.4.0'
     implementation 'org.seleniumhq.selenium:selenium-server:4.0.0-alpha-2'
     implementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
-
+    implementation 'log4j:log4j:1.2.17'
 }
 
 test {
-useTestNG{
+    useTestNG{
         suites "src\\test\\resources\\myTest.xml"
+    }
 }
-}
+
 
 allure {
     autoconfigure = true
